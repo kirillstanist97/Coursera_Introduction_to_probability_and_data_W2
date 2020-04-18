@@ -505,6 +505,8 @@ were `"delayed"` departing arrive `"on time"`?
 
 nycflights <- nycflights %>% mutate(arr_type= ifelse(arr_delay <= 0, "on time", "delayed"))
 
+nycflights$arr_type
+
 #determine the on time arrival percentage based on whether the flight departed on time or not
 
 nycflights %>% summarise(rate_arr_type = sum(arr_type == "on time")/n())
