@@ -1,9 +1,9 @@
 ---
 title: "Introduction to data"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 <div id="instructions">
@@ -435,6 +435,11 @@ ggplot(data = nycflights, aes(x = origin, fill = dep_type)) +
   geom_bar()
 ```
 
+My dygression for what could be a distribution for flight origin in every month
+```{r}
+ggplot(data = nycflights, aes(x = factor(month), fill = origin)) + geom_bar()
+```
+
 8.  Mutate the data frame so that it includes a new variable that contains the 
 average speed, `avg_speed` traveled by the plane for each flight (in mph). What is 
 the tail number of the plane with the fastest `avg_speed`? **Hint:** Average speed 
@@ -453,6 +458,7 @@ Google this tail number to find out more about the aircraft.
 
 ```{r fastest-avg-speed-tailnum}
 # type your code for Question 8 here, and Knit
+
 
 ```
 
